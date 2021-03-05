@@ -1,0 +1,6 @@
+include ':network'
+include ':user'
+include ':news'
+include ':base'
+include ':app'
+rootProject.name = "mvvm"
