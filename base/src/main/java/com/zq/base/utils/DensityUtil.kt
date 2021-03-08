@@ -1,7 +1,7 @@
 package com.zq.base.utils
 
-import android.R
 import android.content.Context
+import com.zq.base.R
 
 /**
  * 文件名:    DensityUtil
@@ -46,7 +46,7 @@ object DensityUtil {
     }
 
     /**
-     * 获取标题栏（ActionBar）的高度
+     * 获取（ActionBar）的高度
      *
      * @param context 上下文
      * @return px

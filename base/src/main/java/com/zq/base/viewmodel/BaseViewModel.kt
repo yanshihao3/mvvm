@@ -1,10 +1,9 @@
 package com.zq.base.viewmodel
 
-import android.util.Log
 import androidx.lifecycle.*
-import com.aleyn.mvvm.event.Message
-import com.aleyn.mvvm.event.SingleLiveEvent
 import com.zq.base.BaseApplication
+import com.zq.base.event.Message
+import com.zq.base.event.SingleLiveEvent
 import com.zq.base.network.ExceptionHandle
 import com.zq.base.network.IBaseResponse
 import com.zq.base.network.ResponseThrowable
@@ -15,16 +14,22 @@ import kotlinx.coroutines.flow.flow
 /**
  *
  */
-open class BaseViewModel() : AndroidViewModel(BaseApplication.getApplication()),
-    LifecycleObserver {
+abstract class BaseViewModel() : AndroidViewModel(BaseApplication.getApplication()) {
 
     val defUI: UIChange by lazy { UIChange() }
+
+
+    /**
+     * 加载数据
+     */
+    open abstract fun load()
 
     /**
      * 所有网络请求都在 viewModelScope 域中启动，当页面销毁时会自动
      * 调用ViewModel的  #onCleared 方法取消所有协程
      */
-    fun launchUI(block: suspend CoroutineScope.() -> Unit) = viewModelScope.launch { block() }
+    fun launchUI(block: suspend CoroutineScope.() -> Unit) =
+        viewModelScope.launch { block() }
 
     /**
      * 用流的方式进行网络请求

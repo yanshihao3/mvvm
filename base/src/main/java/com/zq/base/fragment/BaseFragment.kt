@@ -5,9 +5,12 @@ import android.view.ViewGroup
 import androidx.annotation.LayoutRes
 import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import com.hjq.toast.ToastUtils
 import com.zq.base.viewmodel.BaseViewModel
 import com.zq.base.viewmodel.ViewModelFactory
+import kotlinx.coroutines.async
+import kotlinx.coroutines.launch
 import java.lang.reflect.ParameterizedType
 
 /**
@@ -70,6 +73,7 @@ abstract class BaseFragment<VM : BaseViewModel, DB : ViewDataBinding?> :
         mViewModel.defUI.msgEvent.observe(this) {
 
         }
+
     }
 
     /**

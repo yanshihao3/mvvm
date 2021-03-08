@@ -85,7 +85,9 @@ abstract class BaseNoModelFragment<DB : ViewDataBinding?> : Fragment(), IBasePag
     }
 
     override fun onLoadMoreFailure(message: String) {}
+
     override fun onLoadMoreEmpty() {}
+
     override fun onRefreshEmpty() {
         if (mLoadService != null) {
             mLoadService!!.showCallback(EmptyCallback::class.java)

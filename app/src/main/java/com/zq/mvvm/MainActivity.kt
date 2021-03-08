@@ -121,7 +121,7 @@ class MainActivity : BaseActivity<MainViewModel, AppActivityMainBinding>() {
     override fun initData() {
         setLoadSir(mDataBind.container)
 
-        mViewModel.getInfo()
+        mViewModel.load()
 
 
         /*ServerApi.getInstance().doGet().setUrl("http://app.demo.zqiot.com:6100/vitalSigns/main")

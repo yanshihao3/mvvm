@@ -1,4 +1,4 @@
-package com.aleyn.mvvm.event
+package com.zq.base.event
 
 /**
  *   @auther : Aleyn
