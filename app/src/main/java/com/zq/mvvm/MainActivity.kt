@@ -124,16 +124,17 @@ class MainActivity : BaseActivity<MainViewModel, AppActivityMainBinding>() {
         mViewModel.load()
 
 
-        /*ServerApi.getInstance().doGet().setUrl("http://app.demo.zqiot.com:6100/vitalSigns/main")
+        ServerApi.getInstance().doGet().setUrl("http://app.demo.zqiot.com:6100/vitalSigns/main")
             .execute<String>(object : ModelCallback<String>() {
                 override fun onSuccess(t: String?) {
 
                 }
+
                 override fun onError(exception: Exception?) {
                     super.onError(exception)
                 }
 
-            })*/
+            })
     }
 
     override fun onRetryBtnClick() {
