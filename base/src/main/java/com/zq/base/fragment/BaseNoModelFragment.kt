@@ -31,6 +31,7 @@ abstract class BaseNoModelFragment<DB : ViewDataBinding?> : Fragment(), IBasePag
     override fun onAttach(context: Context) {
         super.onAttach(context)
         mContext = context
+        mActivity = activity
     }
 
     override fun onCreateView(
@@ -44,7 +45,6 @@ abstract class BaseNoModelFragment<DB : ViewDataBinding?> : Fragment(), IBasePag
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        mActivity = activity
         initView()
         initData()
     }

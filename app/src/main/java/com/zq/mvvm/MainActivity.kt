@@ -1,5 +1,6 @@
 package com.zq.mvvm
 
+import android.os.Bundle
 import android.view.Menu
 import android.view.View
 import androidx.fragment.app.Fragment
@@ -141,5 +142,12 @@ class MainActivity : BaseActivity<MainViewModel, AppActivityMainBinding>() {
         showContent()
     }
 
+    override fun onPause() {
+        super.onPause()
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+    }
 
 }
