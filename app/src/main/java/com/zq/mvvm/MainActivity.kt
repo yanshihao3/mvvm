@@ -100,7 +100,7 @@ class MainActivity : BaseActivity<MainViewModel, AppActivityMainBinding>() {
         showBadgeView(3, 5)
 
         val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.container, mHomeFragment)
+        transaction.add(R.id.container, mHomeFragment)
         transaction.commit()
         mDataBind.bottomView.setOnNavigationItemSelectedListener {
             var fragCategory: Fragment? = null

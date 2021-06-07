@@ -6,6 +6,8 @@ import com.hjq.toast.ToastUtils
 import com.kingja.loadsir.core.LoadSir
 import com.zq.base.loadsir.*
 import com.zq.base.utils.ToastStyle
+import me.jessyan.autosize.AutoSizeConfig
+import me.jessyan.autosize.unit.Subunits
 
 
 /**
@@ -35,6 +37,7 @@ open class BaseApplication : Application() {
 
         ToastUtils.init(this)
         ToastUtils.initStyle(ToastStyle())
+
     }
 
     fun setDebug(isDebug: Boolean) {

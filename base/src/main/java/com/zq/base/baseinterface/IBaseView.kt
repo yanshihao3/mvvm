@@ -7,7 +7,14 @@ package com.zq.base.baseinterface
  * @create: 2021-03-03 17:34
  */
 interface IBaseView {
+    /**
+     * 显示内容
+     */
     fun showContent()
+
+    /**
+     *显示loading
+     */
     fun showLoading()
 
     /**
